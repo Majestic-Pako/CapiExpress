@@ -18,10 +18,6 @@
                     <input placeholder="Nombre y apellido" id= "nom" name="nom" type="text">
                 </div>
                 <div>
-                    <label for="email" >Email</label>
-                    <input placeholder="ejemplo@gmail.com"  id="email" name="email" type="email"  >
-                </div>
-                <div>
                     <label for="num">Teléfono:</label>
                     <input placeholder="celular/telefono" id="num" name="num" type="number">
                 </div> 
