@@ -10,6 +10,7 @@
     <h1>Pedido Express</h1>
 </header>
 <main>
+    //Menu 
     <section id="menu">
         <article>
             <form action= "..pages/" method="get">
@@ -39,6 +40,7 @@
                 <div>
                     <input type="submit" >
                 </div>
+                //Seleccion del cliente
                 <label for="fruta">Selecciona una fruta:</label>
                 <select id="fruta" name="fruta">
                 <option value="manzana">Manzana</option>
