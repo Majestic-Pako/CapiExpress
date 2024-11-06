@@ -39,6 +39,14 @@
                 <div>
                     <input type="submit" >
                 </div>
+                <label for="fruta">Selecciona una fruta:</label>
+                <select id="fruta" name="fruta">
+                <option value="manzana">Manzana</option>
+                <option value="naranja">Naranja</option>
+                <option value="plátano">Plátano</option>
+                <option value="uva">Uva</option>
+    </select>
+    <button type="submit">Enviar</button>
             </form>   
 </main>          
 
