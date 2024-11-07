@@ -41,14 +41,31 @@
                     <input type="submit" >
                 </div>
                 //Seleccion del cliente
-                <label for="Cafe">Cafes</label>
+                <label for="cafe">Cafes</label>
                 <select id="cafe" name="cafe">
                 <option value="espresso">Espresso</option>
                 <option value="leche">Cafe con Leche</option>
                 <option value="latte">Latte</option>
                 <option value="capuccino">Capuccino</option>
                 <option value="americano">Americano</option>
-                
+
+                //Seleccion de acompañamiento     
+                <label for="acompañamiento">Acompañamiento</label>
+                <select id="acompañamiento" name="acompañamiento">
+                <option value="medialunas">Medialunas</option>
+                <option value="bagel">Bagel Sandwich</option>
+                <option value="croissant">Croissant</option>
+                <option value="tostado">Tostado de jamon y queso</option>
+                <option value="croque">Croque Monsieur</option>
+
+                //Seleccion de bebidas
+                <label for="bebidas">Bebidas</label>
+                <select id="bebidas" name="bebidas">
+                <option value="frappuccino">Frappuccino</option>
+                <option value="te">Te Helado</option>
+                <option value="acai">Frutilla Acai</option>
+                <option value="chocolate">Chocolate Caliente</option>
+                <option value="submarino">Submarino</option>
     </select>
     <button type="submit">Enviar</button>
             </form>   
