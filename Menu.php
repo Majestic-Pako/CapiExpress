@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <h1>Pedido Express</h1>
 </header>
 <main>
-    //Menu 
+    //CORREGIR
     <section id="menu">
         <article>
             <form action= "..pages/" method="get">
