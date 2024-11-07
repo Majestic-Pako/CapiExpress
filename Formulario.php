@@ -41,12 +41,14 @@
                     <input type="submit" >
                 </div>
                 //Seleccion del cliente
-                <label for="fruta">Selecciona una fruta:</label>
-                <select id="fruta" name="fruta">
-                <option value="manzana">Manzana</option>
-                <option value="naranja">Naranja</option>
-                <option value="plátano">Plátano</option>
-                <option value="uva">Uva</option>
+                <label for="Cafe">Cafes</label>
+                <select id="cafe" name="cafe">
+                <option value="espresso">Espresso</option>
+                <option value="leche">Cafe con Leche</option>
+                <option value="latte">Latte</option>
+                <option value="capuccino">Capuccino</option>
+                <option value="americano">Americano</option>
+                
     </select>
     <button type="submit">Enviar</button>
             </form>   
