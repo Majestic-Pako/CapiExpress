@@ -1,4 +1,6 @@
 <?php
+
+/*
 $productos = [
     'cafe' => [
         [
@@ -83,6 +85,16 @@ $productos = [
     ]
 ];
 $productoSeleccionado = isset($_POST['producto']) ? $_POST['producto'] : 'todos';
+
+*/
+
+$productoSeleccionado = $_GET['producto'] ?? null;
+
+require_once('consultas/conexion.php');
+require_once('consultas/consultas_productos.php');
+
+$productos = getProductos($conexion, $productoSeleccionado);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -107,19 +119,28 @@ $productoSeleccionado = isset($_POST['producto']) ? $_POST['producto'] : 'todos'
         <h1>Bienvenido a nuestro catálogo</h1>
         <p><strong>Aquí encontrarás nuestros productos para que puedas pedir en la caja</strong></p>
         <img src="img/cap.png" alt="">
-        <form method="post" action="">
+        <form method="get" action="">
             <label for="producto">Elige un producto:</label>
             <select name="producto" id="producto">
-                <option value="todos" <?php if ($productoSeleccionado == 'todos') echo 'selected'; ?>>Todos</option>
-                <option value="cafe" <?php if ($productoSeleccionado == 'cafe') echo 'selected'; ?>>Café</option>
-                <option value="comida" <?php if ($productoSeleccionado == 'comida') echo 'selected'; ?>>Comida</option>
-                <option value="bebidas" <?php if ($productoSeleccionado == 'bebidas') echo 'selected'; ?>>Bebidas</option>
+                <option value="">Todos</option>
+                <option value="Café" <?php if ($productoSeleccionado == 'Café') echo 'selected'; ?>>Café</option>
+                <option value="Comida" <?php if ($productoSeleccionado == 'Comida') echo 'selected'; ?>>Comida</option>
+                <option value="Bebidas" <?php if ($productoSeleccionado == 'Bebidas') echo 'selected'; ?>>Bebidas</option>
             </select>
             <button type="submit">Filtrar</button>
         </form>
         <section class="fondoMenu">
+
+            <?php foreach($productos as $producto): ?>
+                <article>
+                    <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>">
+                    <h3><?php echo $producto['nombre']; ?></h3>
+                </article>
+            <?php endforeach ?>
+
             <?php 
-            if ($productoSeleccionado == 'todos' || $productoSeleccionado == 'cafe') : ?>
+            /* COMENTADO POR EL PROFE */
+            /*if ($productoSeleccionado == 'todos' || $productoSeleccionado == 'cafe') : ?>
                 <h2>Café</h2>
                 <?php foreach ($productos['cafe'] as $producto) : ?>
                     <article>
@@ -147,7 +168,7 @@ $productoSeleccionado = isset($_POST['producto']) ? $_POST['producto'] : 'todos'
                         <h3><?php echo $producto['nombre']; ?></h3>
                     </article>
                 <?php endforeach; ?>
-            <?php endif; ?>
+            <?php endif; */ ?>
         </section>
     </main> 
     <footer>
