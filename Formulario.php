@@ -6,7 +6,10 @@
     <title>Formulario</title>
 </head>
 <body>
-    <h1>Pedido Express</h1>
-    <footer> CapiExpress </footer>
+    <main>
+        <h1>Pedido Express</h1>
+    </main>
+    
+    <footer> CapiExpress</footer>
 </body>
 </html>
