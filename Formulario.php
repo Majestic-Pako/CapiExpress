@@ -7,7 +7,8 @@
 </head>
 <body>
     <main>
-        <h1>Pedido Express</h1>
+        <h1>Unete a nuestra familia!!!</h1> 
+        
     </main>
     <footer> CapiExpress</footer>
 </body>
