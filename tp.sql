@@ -48,12 +48,12 @@ INSERT INTO `productos` (`id`, `nombre`, `categoria`, `imagen`) VALUES
 (7, 'Medialunas', 'Comida', 'img/Medialunas-f.png'),
 (8, 'Crossaint', 'Comida', 'img/Crossaint-f.png'),
 (9, 'Bagel Sandwich', 'Comida', 'img/Bagel-f.png'),
-(10, 'Te', 'Bebidas', '#'),
-(11, 'Frappuccino', 'Bebidas', '#'),
-(12, 'Te Helado', 'Bebidas', '#'),
-(13, 'Frutilla Acai', 'Bebidas', '#'),
-(14, 'Chocolate Caliente', 'Bebidas', '#'),
-(15, 'Submarino', 'Bebidas', '#');
+(10, 'Te', 'Bebidas', 'img/Te-f.png'),
+(11, 'Frappuccino', 'Bebidas', 'img/Frappuccino-f.png'),
+(12, 'Te Helado', 'Bebidas', 'img/Helado-f.png'),
+(13, 'Frutilla Acai', 'Bebidas', 'img/Acai-f.png'),
+(14, 'Chocolate Caliente', 'Bebidas', 'img/Chocolate-f.png'),
+(15, 'Submarino', 'Bebidas', 'img/Submarino-f.png');
 
 --
 -- Índices para tablas volcadas
