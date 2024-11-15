@@ -27,7 +27,9 @@ $productos = getProductos($conexion, $productoSeleccionado);
     <main>
         <h1>Bienvenido a nuestro catálogo</h1>
         <p><strong>Aquí encontrarás nuestros productos para que puedas pedir en la caja</strong></p>
+        <figure id="portMenu">
         <img src="img/cap.png" alt="">
+        </figure>
         <form method="get" action="">
             <label for="producto">Elige un producto:</label>
             <select name="producto" id="producto">
@@ -39,12 +41,16 @@ $productos = getProductos($conexion, $productoSeleccionado);
             <button type="submit">Filtrar</button>
         </form>
         <section class="fondoMenu">
-            <?php foreach($productos as $producto): ?>
-                <article>
-                    <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>">
-                    <h3><?php echo $producto['nombre']; ?></h3>
+        <?php foreach ($productos as $producto): ?>
+                <?php 
+                // Verificar si la imagen es inválida y asignar una genérica
+                $rutaImagen = $producto['imagen'] === '#' ? 'img/placeholder.png' : $producto['imagen']; 
+                ?>
+                <article class="card">
+                    <img src="<?php echo $rutaImagen; ?>" alt="<?php echo htmlspecialchars($producto['nombre']); ?>" class="card-img">
+                    <h3 class="card-title"><?php echo htmlspecialchars($producto['nombre']); ?></h3>
                 </article>
-            <?php endforeach ?>
+            <?php endforeach; ?>
         </section>
     </main> 
     <footer>
