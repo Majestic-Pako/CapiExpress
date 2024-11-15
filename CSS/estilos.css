@@ -11,6 +11,71 @@
 main {
     margin: auto;
     text-align: center;
+    background-color: #804000;
+}
+.producto-form {
+    margin: 30px auto;
+    margin-bottom: 20px; /* Separación del formulario con las tarjetas */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Línea divisoria */
+    padding-bottom: 10px; /* Espacio interno adicional */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border: 1px solid white; /* Borde blanco */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Etiqueta */
+.form-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Contenedor para el selector y el botón */
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Selector */
+.form-select {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #222;
+    width: 60%;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Botón */
+.form-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222; /* Negro */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-button:hover {
+    background-color: #444; /* Gris oscuro */
+    transform: scale(1.05);
 }
 
 .fondoMenu {

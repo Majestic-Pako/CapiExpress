@@ -30,15 +30,17 @@ $productos = getProductos($conexion, $productoSeleccionado);
         <figure id="portMenu">
         <img src="img/cap.png" alt="">
         </figure>
-        <form method="get" action="">
-            <label for="producto">Elige un producto:</label>
-            <select name="producto" id="producto">
-                <option value="">Todos</option>
-                <option value="Café" <?php if ($productoSeleccionado == 'Café') echo 'selected'; ?>>Café</option>
-                <option value="Comida" <?php if ($productoSeleccionado == 'Comida') echo 'selected'; ?>>Comida</option>
-                <option value="Bebidas" <?php if ($productoSeleccionado == 'Bebidas') echo 'selected'; ?>>Bebidas</option>
-            </select>
-            <button type="submit">Filtrar</button>
+        <form method="get" action="" class="producto-form">
+            <label for="producto" class="form-label">Elige un producto:</label>
+            <div class="select-container">
+                <select name="producto" id="producto" class="form-select">
+                    <option value="">Todos</option>
+                    <option value="Café" <?php if ($productoSeleccionado == 'Café') echo 'selected'; ?>>Café</option>
+                    <option value="Comida" <?php if ($productoSeleccionado == 'Comida') echo 'selected'; ?>>Comida</option>
+                    <option value="Bebidas" <?php if ($productoSeleccionado == 'Bebidas') echo 'selected'; ?>>Bebidas</option>
+                </select>
+                <button type="submit" class="form-button">Filtrar</button>
+            </div>
         </form>
         <section class="fondoMenu">
         <?php foreach ($productos as $producto): ?>
