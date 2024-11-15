@@ -40,10 +40,10 @@ CREATE TABLE `productos` (
 
 INSERT INTO `productos` (`id`, `nombre`, `categoria`, `imagen`) VALUES
 (1, 'Café con leche', 'Café', 'img/Leche-f.png'),
-(2, 'Espresso', 'Café', '#'),
-(3, 'Latte', 'Café', '#'),
-(4, 'Americano', 'Café', '#'),
-(5, 'Capuccino', 'Café', '#'),
+(2, 'Espresso', 'Café', 'img/Espresso-f.png'),
+(3, 'Latte', 'Café', 'img/Latte-f.png'),
+(4, 'Americano', 'Café', 'img/Americano-f.png'),
+(5, 'Capuccino', 'Café', 'img/Capuccino-f.png'),
 (6, 'Tostadas', 'Comida', 'img/Tostada-f.png'),
 (7, 'Medialunas', 'Comida', '#'),
 (8, 'Crossaint', 'Comida', '#'),
