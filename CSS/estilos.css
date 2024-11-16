@@ -7,7 +7,66 @@
 //////////
             SECCION Principal PARTE DE THOMAS
 */
-
+header{
+    width: 100%;
+    background-color: #2C2C2C;
+    padding: 5px;
+}
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+}
+nav .navi{
+    flex-shrink: 0;
+}
+nav .navi img{
+    height: 60px; 
+    width: 60px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    object-fit: cover;
+}
+nav ul {
+    display: flex;
+    justify-content: center; 
+    flex-grow: 1; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+}
+nav ul li {
+    margin-left: 25px;
+}
+nav ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #F5F5DC;
+}
+header nav a{
+    text-decoration: none; 
+    color: #F5F5DC;
+} 
+header nav :hover{
+    transform: scale(1.1);
+}
+header nav a:hover{
+    color: #8B8000; 
+} 
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column; 
+        padding:10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px;
+    }
+} 
 main {
     margin: auto;
     text-align: center;
@@ -27,7 +86,6 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Etiqueta */
 .form-label {
     font-size: 18px;
     font-weight: bold;
@@ -36,7 +94,6 @@ main {
     display: block;
 }
 
-/* Contenedor para el selector y el botón */
 .select-container {
     display: flex;
     justify-content: center;
@@ -44,7 +101,6 @@ main {
     gap: 15px;
 }
 
-/* Selector */
 .form-select {
     font-size: 16px;
     padding: 10px;
@@ -61,13 +117,12 @@ main {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Botón */
 .form-button {
     font-size: 16px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #222; /* Negro */
+    background-color: #222; 
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;

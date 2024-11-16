@@ -17,6 +17,9 @@ $productos = getProductos($conexion, $productoSeleccionado);
 <body>
     <header>
         <nav>
+            <div class = "navi">
+                <img src="img/Capi.png" alt="">
+            </div>
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Menú</a></li>
