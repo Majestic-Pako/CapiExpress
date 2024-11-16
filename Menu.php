@@ -28,8 +28,17 @@ $productos = getProductos($conexion, $productoSeleccionado);
         </nav>
     </header>
     <main>
-        <h1>Bienvenido a nuestro catálogo</h1>
-        <p><strong>Aquí encontrarás nuestros productos para que puedas pedir en la caja</strong></p>
+    <h1 class="extra1">Explora Nuestro Menú</h1>
+    <p class="extra2">Descubre una variedad de opciones deliciosas diseñadas para satisfacer todos los gustos. Desde aromáticos cafés y refrescantes bebidas, 
+                                hasta platillos irresistibles, tenemos algo especial para ti. ¡Explora y encuentra tu próximo favorito!</p>
+        <section class="info-section">
+            <h2>¿Por qué elegirnos?</h2>
+            <ul class="info-list">
+                <li>🌟 Productos de la más alta calidad.</li>
+                <li>🚀 Entregas rápidas y confiables.</li>
+                <li>💰 Ofertas exclusivas para nuestros clientes.</li>
+            </ul>
+        </section>
         <figure id="portMenu">
         <img src="img/cap.png" alt="">
         </figure>
