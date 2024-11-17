@@ -12,6 +12,8 @@ header{
     width: 100%;
     background-color: #2C2C2C;
     padding: 5px;
+    padding: 5px 0; 
+    margin-bottom: 20px; 
 }
 nav{
     display: flex;
@@ -80,6 +82,8 @@ main {
     color: #2C2C2C;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding-top: 15px;
+    margin-top: 20px;
 }
 
 .extra2 {

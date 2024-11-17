@@ -35,8 +35,8 @@ $productos = getProductos($conexion, $productoSeleccionado);
             <h2>¿Por qué elegirnos?</h2>
             <ul class="info-list">
                 <li>🌟 Productos de la más alta calidad.</li>
-                <li>🚀 Entregas rápidas y confiables.</li>
-                <li>💰 Ofertas exclusivas para nuestros clientes.</li>
+                <li>🚀 Servicio veloz en las entregas</li>
+                <li>💰 Los mejores precios de la zona</li>
             </ul>
         </section>
         <figure id="portMenu">
@@ -87,13 +87,13 @@ $productos = getProductos($conexion, $productoSeleccionado);
         </ul>
         <ul class="fin">
             <li class="fin-elem">
-                <a href="" class="fin-icon">Inicio</a>
+                <a href="index.php" class="fin-icon">Inicio</a>
             </li>
             <li class="fin-elem">
-                <a href="" class="fin-icon">Menu</a>
+                <a href="Menu.php" class="fin-icon">Menu</a>
             </li>
             <li class="fin-elem">
-                <a href="" class="fin-icon">Sobre nosotros</a>
+                <a href="#" class="fin-icon">Sobre nosotros</a>
             </li>
         </ul>
         <p class="text">&copy;CapiExpress | Todos los derechos reservados </p>
