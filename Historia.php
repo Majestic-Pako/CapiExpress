@@ -4,11 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia de Capiexpress</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Historia</title>
 </head>
 <body>
     <header>
-        <main id="Historia">
+    <nav>
+            <div class = "navi">
+                <img src="img/Capi.png" alt="Capibara">
+            </div>
+            <ul>
+                <li><a href="Index.php">Inicio</a></li>
+                <li><a href="Menu.php">Menú</a></li>
+                <li><a href="Historia.php">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
             <section>
                 <h2>El Origen</h2>
                 <p>
@@ -34,7 +46,7 @@
                 <p>
                     La idea era ofrecer algo más que un simple "café rápido"; CapiExpress se convirtió en un lugar donde las personas podían disfrutar de una pausa, aunque fuera breve.
                 </p>
-                <img src="imagen de rapidezycalidad.avif" alt="Cafetería moderna" />
+                <img src="img/local.png" alt="Cafetería moderna" />
             </section>
     
             <section>
@@ -58,14 +70,42 @@
                 <p>
                     La marca ha crecido más allá de la simple venta de café, convirtiéndose en un punto de encuentro para personas que aprecian el buen café, el buen servicio y el impacto positivo en la comunidad. CapiExpress continúa siendo el lugar donde los sabores se encuentran con la rapidez, y donde cada taza cuenta una historia: la de una pequeña idea que creció gracias al amor por el café y la dedicación a las personas que lo disfrutan.
                 </p>
-                <img src="imagen de rapidezycalidad.avif" alt="Cafetería moderna" />
+                <img src="img/local.png" alt="Cafetería moderna" />
             </section>
         </main>
-    </header>
-    
-    <footer>
-        <p>&copy; CapiExpress. Todos los derechos reservados.</p>
+        <footer class="footer">
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="https://github.com/Majestic-Pako/CapiExpress.git" class="icon">
+                <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="https://www.instagram.com/escueladavinci/?hl=es" class="icon">
+                <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="https://youtu.be/BcGAPkjt_IE?si=ziQ-VTYzYdT3wx_R" class="icon">
+                <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="fin">
+            <li class="fin-elem">
+                <a href="index.php" class="fin-icon">Inicio</a>
+            </li>
+            <li class="fin-elem">
+                <a href="Menu.php" class="fin-icon">Menu</a>
+            </li>
+            <li class="fin-elem">
+                <a href="Historia.php" class="fin-icon">Sobre nosotros</a>
+            </li>
+        </ul>
+        <p class="text">&copy;CapiExpress | Todos los derechos reservados </p>
     </footer>
+    <script  type = "module"  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " > </script> 
+    <script nomodule  src  = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js " > </script>
 </body>
 
 </html>
