@@ -258,6 +258,7 @@ main {
     align-items: center;
     flex-direction: column;
 }
+
 .social-icon{
     display: flex;
     justify-content: center;
@@ -266,9 +267,11 @@ main {
     margin: 10px 5px;
     flex-wrap: wrap;
 }
+
 .icon-elem{
     list-style: none;
 }
+
 .icon{
     color: #F5F5DC;
     font-size: 32px;
@@ -276,9 +279,11 @@ main {
     margin: 0 10px;
     transition: 0.5s;
 }
+
 .icon:hover{
     transform: translateY(-10px);
 }
+
 .fin{
     display: flex;
     justify-content: center;
@@ -287,9 +292,11 @@ main {
     margin: 10px 0;
     flex-wrap: wrap;
 }
+
 .fin-elem{
     list-style: none;
 }
+
 .fin-icon{
     color: #F5F5DC;
     font-size: 20px;
@@ -299,9 +306,11 @@ main {
     opacity: 0.75;
     transition: 0.3s;
 }
+
 .fin-icon:hover{
     opacity: 1;
 }
+
 .text{
     color: #F5F5DC;
     text-align: center;
