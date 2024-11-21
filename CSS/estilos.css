@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    margin: 0;
+    padding: 0;
+}
 /*
 //////////
             SECCION Principal PARTE DE THOMAS
@@ -11,19 +14,20 @@
 header{
     width: 100%;
     background-color: #2C2C2C;
-    padding: 5px;
-    padding: 5px 0; 
-    margin-bottom: 20px; 
+    padding: 20px;
 }
+
 nav{
     display: flex;
     justify-content:space-between;
     align-items: center;
     padding: 20px;
 }
+
 nav .navi{
     flex-shrink: 0;
 }
+
 nav .navi img{
     height: 60px; 
     width: 60px;
@@ -31,6 +35,7 @@ nav .navi img{
     transition: all 0.2s;
     object-fit: cover;
 }
+
 nav ul {
     display: flex;
     justify-content: center; 
@@ -39,24 +44,30 @@ nav ul {
     margin: 0; 
     padding: 0;
 }
+
 nav ul li {
     margin-left: 25px;
 }
+
 nav ul li a {
     font-size: 18px;
     text-decoration: none;
     color: #F5F5DC;
 }
+
 header nav a{
     text-decoration: none; 
     color: #F5F5DC;
-} 
+}
+
 header nav :hover{
     transform: scale(1.1);
 }
+
 header nav a:hover{
     color: #8B8000; 
 } 
+
 @media (max-width: 650px) {
     nav {
         flex-direction: column; 
@@ -82,8 +93,7 @@ main {
     color: #2C2C2C;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    padding-top: 15px;
-    margin-top: 20px;
+    margin: auto;
 }
 
 .extra2 {
