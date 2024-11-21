@@ -24,6 +24,7 @@ $productos = getProductos($conexion, $productoSeleccionado);
                 <li><a href="Index.php">Inicio</a></li>
                 <li><a href="Menu.php">Menú</a></li>
                 <li><a href="Historia.php">Sobre nosotros</a></li>
+                <li><a href="Formulario.png">Unete</a></li>
             </ul>
         </nav>
     </header>
@@ -93,7 +94,10 @@ $productos = getProductos($conexion, $productoSeleccionado);
                 <a href="Menu.php" class="fin-icon">Menu</a>
             </li>
             <li class="fin-elem">
-                <a href="#" class="fin-icon">Sobre nosotros</a>
+                <a href="Historia.php" class="fin-icon">Sobre nosotros</a>
+            </li>
+            <li class="fin-elem">
+                <a href="Formulario.png" class="fin-icon">Unete</a>
             </li>
         </ul>
         <p class="text">&copy;CapiExpress | Todos los derechos reservados </p>

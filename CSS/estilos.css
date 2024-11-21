@@ -246,19 +246,70 @@ main {
     gap: 10px;
 }
 
-/*
-//////////
-            SECCION historia de la empresa PARTE DE ESTEBAN
-/////////
-*/
+.form-container {
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+}
 
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    padding-top: 15px;
+}
+
+.form-group label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2C2C2C;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #8B8000;
+    outline: none;
+}
+
+.text-success {
+    color: #28a745;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
 .error-text {
     margin: auto;
     text-align: center;
-    color: #613d22;
+    color: #dc3545;
+}
+.btn-submit {
+    background-color: #8B8000;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
+.btn-submit:hover {
+    background-color: #6f6a00;
+    transform: scale(1.05);
+}
 .footer{
     position: relative;
     width: 100%;
