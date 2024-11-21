@@ -33,7 +33,7 @@
                 <p>
                     Con la intención de brindar un servicio de calidad sin perder la rapidez, el compañero ideó CapiExpress como una cafetería que ofrecería no solo el café de siempre, sino una propuesta diferente. Sabía que en la vida diaria las personas no siempre tienen el lujo de detenerse en una cafetería por horas, pero aún así merecían disfrutar de una taza excelente.
                 </p>
-                <img src="img/cafeteria moderna.png" alt="Cafetería moderna" />
+                <img src="img/interior.png" alt="Cafetería moderna" />
                 
             </section>
     
@@ -48,7 +48,7 @@
                 <p>
                     La idea era ofrecer algo más que un simple "café rápido"; CapiExpress se convirtió en un lugar donde las personas podían disfrutar de una pausa, aunque fuera breve.
                 </p>
-                <img src="img/cafe de calidad.png" alt="Cafe" />
+                <img src="img/calidad.png" alt="Cafe" />
                 
             </section>
     
