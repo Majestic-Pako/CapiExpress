@@ -252,11 +252,13 @@ main {
 /////////
 */
 
-/*
-//////////
-            SECCION pagina de error PARTE DE ANTONIO
-//////////
-*/
+
+.error-text {
+    margin: auto;
+    text-align: center;
+    color: #613d22;
+}
+
 .footer{
     position: relative;
     width: 100%;
