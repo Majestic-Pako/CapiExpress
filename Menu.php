@@ -96,7 +96,7 @@ $productos = getProductos($conexion, $productoSeleccionado);
                 <a href="Historia.php" class="fin-icon">Sobre nosotros</a>
             </li>
             <li class="fin-elem">
-                <a href="Formulario.png" class="fin-icon">Unete</a>
+                <a href="Formulario.php" class="fin-icon">Unete</a>
             </li>
         </ul>
         <p class="text">&copy;CapiExpress | Todos los derechos reservados </p>
