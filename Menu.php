@@ -3,7 +3,6 @@ $productoSeleccionado = $_GET['producto'] ?? null;
 
 require_once('consultas/conexion.php');
 require_once('consultas/consultas_productos.php');
-
 $productos = getProductos($conexion, $productoSeleccionado);
 ?>
 <!DOCTYPE html>
