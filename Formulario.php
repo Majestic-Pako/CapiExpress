@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h1>Unete a Nuestra Familia</h1>
         <p><strong>Te pediremos que nos deje tu contacto y proximamente te contactaremos!!!</strong></p>
         <?php if(empty($errores) && !empty($email) && !empty($nombre) && !empty($telefono)): ?>
-            <p class="text-success fs-5">Envio realizado. Pronto estaremos en contacto.</p>
+            <p class="text-success fs-5">Datos Aceptados. Pronto estaremos en contacto. 💖</p>
         <?php endif ?>
 
         <?php foreach($errores as $error): ?>
