@@ -13,7 +13,7 @@
             <div class = "navi">
                 <img src="img/Capi.png" alt="">
             </div>
-            <ul>
+            <ul class="menu">
                 <li><a href="Index.php">Inicio</a></li>
                 <li><a href="Menu.php">Menú</a></li>
                 <li><a href="Historia.php">Sobre nosotros</a></li>
@@ -22,33 +22,13 @@
         </nav>
     </header>
     <main>
-        <h1>CapiExpress</h1>
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <section class="banner">
+            <div class="content-banner">
+                <p>Cafe Delicioso</p>
+                <h2>100% Natural <br>Cafe Fresco</h2>
+                <a href="Menu.php">Mira Nuestro Menu!!!</a>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/cal1.png" class="d-block w-100" alt="calidad">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/interior.png" class="d-block w-100" alt="interior">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/local-f.png" class="d-block w-100" alt="local">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        </section>
     </main>
     <footer class="footer">
         <ul class="social-icon">
