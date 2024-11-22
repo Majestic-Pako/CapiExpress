@@ -6,11 +6,11 @@
 body{
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
 }
-/*
-//////////
-            SECCION Principal PARTE DE THOMAS
-*/
+
 header{
     width: 100%;
     background-color: #2C2C2C;
@@ -85,8 +85,13 @@ main {
     margin: auto;
     text-align: center;
     background-color: #D2B48C;
+    flex: 1;
 }
 
+header, main, footer {
+    margin: 0;
+    padding: 0;
+}
 .extra1 {
     font-size: 32px;
     font-weight: bold;
@@ -123,6 +128,91 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+.todo {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    text-align: left;
+    background-color: #FFF8DC;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo img {
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo article {
+    flex: 1;
+    color: #333;
+    padding: 10px;
+}
+
+.todo1 {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row-reverse;
+    padding: 20px;
+    text-align: left;
+    background-color: #FFF8DC;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.todo1 img {
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo1 article {
+    flex: 1;
+    color: #333;
+    padding: 10px;
+}
+.solo{
+    display: flex;
+    text-align: center;
+    width: 80%;
+    padding: 20px;
+    background-color: #FFF8DC;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #6f6a00;
+    margin: auto;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+    .todo, .todo1 {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 10px; 
+    }
+
+    .todo img, .todo1 img {
+        max-width: 80%; 
+    }
+
+    .todo article, .todo1 article {
+        padding: 0; 
+    }
+}
 .form-label {
     font-size: 18px;
     font-weight: bold;
@@ -216,6 +306,7 @@ main {
     text-align: center;
     margin: 0;
 }
+
 .info-section {
     background-color: #FFF8DC;
     padding: 20px;
