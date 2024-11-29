@@ -11,7 +11,7 @@
 <header>
         <nav>
             <div class = "navi">
-                <img src="img/Capi.png" alt="">
+                <a href="Login.php"><img src="img/Capi.png" alt=""></a>
             </div>
             <ul class="menu">
                 <li><a href="Index.php">Inicio</a></li>

@@ -520,3 +520,22 @@ header, main, footer {
     margin-bottom: 10px;
     font-size: 20px;
 }
+.fondoLogin{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    padding: 20px;
+    background-image: url('../img/Fondo-Login.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+.contenedor-login{
+    background-color: #D2B48C;
+    border-radius: 15px;
+    width: 70%;
+    display: inline-block;
+    margin: auto;
+    align-items: center;
+}
