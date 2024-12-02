@@ -433,6 +433,7 @@ header, main, footer {
     text-align: center;
     color: #dc3545;
 }
+
 .btn-submit {
     background-color: #8B8000;
     color: white;
@@ -447,6 +448,177 @@ header, main, footer {
 .btn-submit:hover {
     background-color: #6f6a00;
     transform: scale(1.05);
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.con-imagen img{
+    width: 500px;
+}
+
+.contenedor-form-login, .contenerdor-form-registro{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor-form-login.inactive, .contenerdor-form-registro.inactive{
+    display: none;
+}
+
+.titulo{
+    color: #2C2C2C;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.subtitulo{
+    color: #6f6a00;
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.form-ingreso{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    padding: 10px;
+    outline: 2px solid #444;
+    border-radius: 8px;
+    gap: 10px;
+    transition: 0.4s;
+}
+.input-box i{
+    color: #444;
+    font-size: 1.5em;
+}
+
+.input-box input{
+    border: none;
+    color: blue;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.1em;
+    width: 340px;
+}
+
+.input-box.focus{
+    outline-color: #6f6a00;
+}
+
+.input-box.focus i{
+    color: #6f6a00;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox input{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.checkbox label{
+    font-size: 1em;
+    color: #222;
+    cursor: pointer;
+}
+
+.btm{
+    width: 400px;
+    border: none;
+    font-size: 1.1em;
+    background-color: #6f6a00;
+    color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+
+.btm:hover{
+    background-color: #F5F5DC;
+    color: #6f6a00;
+}
+
+.link-text{
+    display: flex;
+    gap: 10px;
+}
+
+.link-text p{
+    font-size: 1em;
+    color: #444;
+}
+
+.link-text a{
+    font-size: 1em;
+    font-weight: 700;
+    color: blue;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.link-text a:hover{
+    color: lightskyblue;
+}
+
+@media screen and (max-width: 887px) {
+    .contenedor{
+        flex-direction: column;
+    }
+    .con-imagen{
+        margin-top: 40px;
+    }
+    .con-imagen img{
+        width: 400px;
+    }
+    .contenedor-form-login, .contenerdor-form-registro{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .con-imagen{
+        margin-top: 10px;
+    }
+    .con-imagen img,.contenedor-form-login, .contenerdor-form-registro{
+        width: 300px;
+    }
+    .titulo{
+        font-size: 2em;
+    }
+    .subtitulo{
+        font-size: 1em;
+    }
+    .input-box, .btm{
+        width: 300px;
+    }
+    .input-box input{
+        font-size: 1em;
+    }
 }
 
 .footer{
@@ -520,22 +692,4 @@ header, main, footer {
     margin-bottom: 10px;
     font-size: 20px;
 }
-.fondoLogin{
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px; 
-    padding: 20px;
-    background-image: url('../img/Fondo-Login.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-}
-.contenedor-login{
-    background-color: #D2B48C;
-    border-radius: 15px;
-    width: 70%;
-    display: inline-block;
-    margin: auto;
-    align-items: center;
-}
+
