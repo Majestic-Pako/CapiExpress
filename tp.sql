@@ -73,9 +73,9 @@ INSERT INTO `productos` (`id`, `nombre`, `categoria`, `imagen`) VALUES
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `rol`) VALUES
 (1, 'Agustin', 'agustin@admin.com', MD5('ad123'), 'administrador'),
-(2, 'Carlos', 'juan@empleado.com', MD5('empleado123'), 'empleado'),
-(3, 'Gustavo', 'maria@empleado.com', MD5('empleado345'), 'empleado'),
-(4, 'Enrrique', 'carlos@empleado.com', MD5('empleado678'), 'empleado');
+(2, 'Carlos', 'juan@gmail.com', MD5('empleado123'), 'empleado'),
+(3, 'Gustavo', 'maria@gmail.com', MD5('empleado345'), 'empleado'),
+(4, 'Enrrique', 'carlos@gmail.com', MD5('empleado678'), 'empleado');
 
 --
 -- Índices para tablas volcadas
