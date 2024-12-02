@@ -35,6 +35,18 @@ CREATE TABLE `productos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL UNIQUE,
+  `password` varchar(255) NOT NULL,
+  `rol` enum('administrador', 'empleado') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
 -- Volcado de datos para la tabla `productos`
 --
 
@@ -56,6 +68,16 @@ INSERT INTO `productos` (`id`, `nombre`, `categoria`, `imagen`) VALUES
 (15, 'Submarino', 'Bebidas', 'img/Submarino-f.png');
 
 --
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `rol`) VALUES
+(1, 'Agustin', 'agustin@admin.com', MD5('ad123'), 'administrador'),
+(2, 'Carlos', 'juan@empleado.com', MD5('empleado123'), 'empleado'),
+(3, 'Gustavo', 'maria@empleado.com', MD5('empleado345'), 'empleado'),
+(4, 'Enrrique', 'carlos@empleado.com', MD5('empleado678'), 'empleado');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -63,6 +85,13 @@ INSERT INTO `productos` (`id`, `nombre`, `categoria`, `imagen`) VALUES
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
+  ADD PRIMARY KEY (`id`);
+
+--
+--Indices de la tabla `usuarios`
+--
+
+ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -75,6 +104,12 @@ ALTER TABLE `productos`
 ALTER TABLE `productos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
