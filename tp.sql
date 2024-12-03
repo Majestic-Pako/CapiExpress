@@ -39,11 +39,12 @@ CREATE TABLE `productos` (
 --
 
 CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL UNIQUE,
   `password` varchar(255) NOT NULL,
-  `rol` enum('administrador', 'empleado') NOT NULL
+  `rol` enum('administrador', 'empleado') NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -71,11 +72,11 @@ INSERT INTO `productos` (`id`, `nombre`, `categoria`, `imagen`) VALUES
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `rol`) VALUES
-(1, 'Agustin', 'agustin@admin.com', MD5('ad123'), 'administrador'),
-(2, 'Carlos', 'juan@gmail.com', MD5('empleado123'), 'empleado'),
-(3, 'Gustavo', 'maria@gmail.com', MD5('empleado345'), 'empleado'),
-(4, 'Enrrique', 'carlos@gmail.com', MD5('empleado678'), 'empleado');
+INSERT INTO `usuarios` (`nombre`, `email`, `password`, `rol`) VALUES
+('Agustin', 'agustin@admin.com', MD5('ad123'), 'administrador'),
+('Juan', 'juan@gmail.com', MD5('empleado123'), 'empleado'),
+('Maria', 'maria@gmail.com', MD5('empleado345'), 'empleado'),
+('Carlos', 'carlos@gmail.com', MD5('empleado678'), 'empleado');
 
 --
 -- Índices para tablas volcadas
@@ -84,14 +85,8 @@ INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `rol`) VALUES
 --
 -- Indices de la tabla `productos`
 --
+
 ALTER TABLE `productos`
-  ADD PRIMARY KEY (`id`);
-
---
---Indices de la tabla `usuarios`
---
-
-ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -104,12 +99,6 @@ ALTER TABLE `usuarios`
 ALTER TABLE `productos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
-
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

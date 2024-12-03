@@ -16,6 +16,7 @@ $registro_aceptado = isset($_POST['registro_aceptado']);
 
 $errores_login = [];
 $errores_registro = [];
+$formulario_activo = 'login'; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $form_type = $_POST['form_type'] ?? null;
@@ -68,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($errores_registro)) {
             $stmt = $conexion->prepare("INSERT INTO usuarios (nombre, email, password, rol) VALUES (?, ?, MD5(?), 'empleado')");
             $stmt->bind_param("sss", $registro_nombre, $registro_email, $registro_password);
+            
             if ($stmt->execute()) {
                 echo "Registro exitoso. Ahora puede iniciar sesión.";
             } else {
@@ -75,6 +77,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             $stmt->close();
         }
+    }
+    if ($form_type === 'registro' && !empty($errores_registro)) {
+        $formulario_activo = 'registro';
+    } elseif ($form_type === 'login' && !empty($errores_login)) {
+        $formulario_activo = 'login';
     }
 }
 $conexion->close();
@@ -101,7 +108,7 @@ $conexion->close();
             <div class="con-imagen">
                 <img src="img/portada-login.png" alt="Capibara con Computadora">
             </div>
-            <div class="contenedor-form-login">
+            <div class="contenedor-form-login <?php echo $formulario_activo === 'login' ? '' : 'inactive'; ?>">
                 <h1 class="titulo">Iniciar sesion</h1>
                 <p class="subtitulo">Bienvenido a nuestra comunidad</p>
                 <?php if (!empty($errores_login)): ?>
@@ -115,11 +122,11 @@ $conexion->close();
                 <input type="hidden" name="form_type" value="login">
                     <div class="input-box">
                     <i class="ri-mail-fill"></i>
-                    <input type="email" placeholder="ejemplo@gmail.com" required>
+                    <input type="email" name="login_email" placeholder="ejemplo@gmail.com">
                     </div>
                     <div class="input-box">
                     <i class="ri-lock-password-fill"></i>
-                    <input type="password" placeholder="Contraseña" required>
+                    <input type="password" name="login_password" placeholder="Contraseña">
                     </div>
                     <button type="submit" class="btm">Acceder</button>
                     <div class="link-text">
@@ -128,32 +135,32 @@ $conexion->close();
                     </div>
                 </form>
             </div>
-            <div class="contenerdor-form-registro inactive">
+            <div class="contenerdor-form-registro <?php echo $formulario_activo === 'registro' ? '' : 'inactive'; ?>">
                 <h1 class="titulo">Registrate</h1>
                 <p class="subtitulo">Estas a punto de unirte a nuestra familia!!!</p>
                 <?php if (!empty($errores_registro)): ?>
                     <div class="mensaje-error-contenedor">
-                    <?php foreach ($errores_registro as $error): ?>
-                        <p class="mensaje-error"><?php echo $error; ?></p>
-                    <?php endforeach; ?>
+                <?php foreach ($errores_registro as $error): ?>
+                    <p class="mensaje-error"><?php echo htmlspecialchars($error); ?></p>
+                <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
                 <form action="" method="POST" class="form-ingreso">
                 <input type="hidden" name="form_type" value="registro">
                     <div class="input-box">
                     <i class="ri-user-add-fill"></i>
-                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" name="registro_nombre" placeholder="Nombre">
                     </div>
                     <div class="input-box">
                     <i class="ri-mail-add-fill"></i>
-                    <input type="email" placeholder="ejemplo@gmail.com" required>
+                    <input type="email" name="registro_email" placeholder="ejemplo@gmail.com">
                     </div>
                     <div class="input-box">
                     <i class="ri-key-fill"></i>
-                    <input type="password" placeholder="Contraseña" required>
+                    <input type="password" name="registro_password" placeholder="Contraseña">
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" id="cbregistro">
+                        <input type="checkbox" name="registro_aceptado" id="cbregistro">
                         <label for="cbregistro">Acepto los Terminos y Condiciones</label>
                     </div>
                     <button type="submit" class="btm">Crear la Cuenta</button>
