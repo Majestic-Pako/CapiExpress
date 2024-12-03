@@ -452,6 +452,18 @@ header, main, footer {
     transform: scale(1.05);
 }
 
+.fondoLogin{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    padding: 20px;
+    background-image: url('../img/Fondo-Login.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
 .contenedor{
     width: 100%;
     height: 100%;
@@ -478,7 +490,7 @@ header, main, footer {
 }
 
 .titulo{
-    color: #2C2C2C;
+    color: #f2f2f2;
     font-size: 2.5em;
     font-weight: 500;
 }
@@ -501,19 +513,19 @@ header, main, footer {
     align-items: center;
     width: 400px;
     padding: 10px;
-    outline: 2px solid #444;
+    outline: 2px solid #40E0D0;
     border-radius: 8px;
     gap: 10px;
     transition: 0.4s;
 }
 .input-box i{
-    color: #444;
+    color: #40E0D0;
     font-size: 1.5em;
 }
 
 .input-box input{
     border: none;
-    color: blue;
+    color: #FFFFFF;
     background-color: transparent;
     outline: none;
     font-size: 1.1em;
@@ -521,11 +533,11 @@ header, main, footer {
 }
 
 .input-box.focus{
-    outline-color: #6f6a00;
+    outline-color: #008080;
 }
 
 .input-box.focus i{
-    color: #6f6a00;
+    color: #008080;
 }
 
 .checkbox{
@@ -561,8 +573,8 @@ header, main, footer {
 }
 
 .btm:hover{
-    background-color: #F5F5DC;
-    color: #6f6a00;
+    background-color: #F1C40F;
+    color: #333333;
 }
 
 .link-text{
@@ -572,19 +584,19 @@ header, main, footer {
 
 .link-text p{
     font-size: 1em;
-    color: #444;
+    color: #FFFFFF;
 }
 
 .link-text a{
     font-size: 1em;
     font-weight: 700;
-    color: blue;
+    color:#6f6a00 ;
     text-decoration: none;
     transition: 0.4s;
 }
 
 .link-text a:hover{
-    color: lightskyblue;
+    color: #F1C40F;
 }
 
 @media screen and (max-width: 891px) {

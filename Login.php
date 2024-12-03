@@ -103,7 +103,7 @@ $conexion->close();
             </div>
         </nav>
     </header>
-    <main>
+    <main class="fondoLogin">
         <section class="contenedor">
             <div class="con-imagen">
                 <img src="img/portada-login.png" alt="Capibara con Computadora">
