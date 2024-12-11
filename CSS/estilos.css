@@ -513,13 +513,13 @@ header, main, footer {
     align-items: center;
     width: 400px;
     padding: 10px;
-    outline: 2px solid #40E0D0;
+    outline: 2px solid #fafafa;
     border-radius: 8px;
     gap: 10px;
     transition: 0.4s;
 }
 .input-box i{
-    color: #40E0D0;
+    color: #fafafa;
     font-size: 1.5em;
 }
 
@@ -533,11 +533,11 @@ header, main, footer {
 }
 
 .input-box.focus{
-    outline-color: #008080;
+    outline-color: #FFF8DC;
 }
 
 .input-box.focus i{
-    color: #008080;
+    color: #FFF8DC;
 }
 
 .checkbox{
@@ -555,7 +555,7 @@ header, main, footer {
 
 .checkbox label{
     font-size: 1em;
-    color: #222;
+    color: #fafafa;
     cursor: pointer;
 }
 
@@ -659,6 +659,7 @@ header, main, footer {
 .mensaje-error:last-of-type {
     margin-bottom: 0;
 }
+
 .footer{
     position: relative;
     width: 100%;
