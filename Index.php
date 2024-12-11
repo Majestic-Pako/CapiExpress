@@ -19,6 +19,27 @@
                 <a href="Menu.php">Mira Nuestro Menu!!!</a>
             </div>
         </section>
+          <!-- Sección para las tarjetas -->
+         <section class="cards-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="img/cafe100.png" alt="Café 1" class="card-img">
+            <h3 class="card-title">Café Clásico</h3>
+            <p>Disfruta de nuestro café clásico, 100% arábica, con un sabor suave y equilibrado.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="img/cafeleche.png" alt="Café 2" class="card-img">
+            <h3 class="card-title">Café con Leche</h3>
+            <p>Un delicioso café con leche que te hará sentirte en casa.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="img/expresso.png" alt="Café 3" class="card-img">
+            <h3 class="card-title">Café Expresso</h3>
+            <p>La intensidad del café expreso con una capa de crema, ideal para los amantes del café fuerte.</p>
+        </div>
+    </section>
     </main>
     <?php
         require_once('./layout/footer.php');
