@@ -47,7 +47,6 @@ require_once('./layout/header.php');
         <section class="fondoMenu">
         <?php foreach ($productos as $producto): ?>
                 <?php 
-                // Verificar si la imagen es inválida y asignar una genérica
                 $rutaImagen = $producto['imagen'] === '#' ? 'img/placeholder.png' : $producto['imagen']; 
                 ?>
                 <article class="card">
