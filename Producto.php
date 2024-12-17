@@ -95,7 +95,7 @@ if (isset($_GET['logout'])) {
                                     <a href='Modificar_producto.php?id={$datos->id}' class='btn btn-small btn-warning' title='Editar'>
                                         <i class='fa-solid fa-pen-to-square'></i>
                                     </a>
-                                    <a href='Crud_producto.php?id={$datos->id}&action=delete' class='btn btn-small btn-danger' title='Eliminar'>
+                                    <a href='Producto.php?id={$datos->id}&action=delete' class='btn btn-small btn-danger' title='Eliminar'>
                                         <i class='fa-solid fa-trash'></i>
                                     </a>
                                 </td>

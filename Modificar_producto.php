@@ -106,26 +106,33 @@ if (isset($_GET['logout'])) {
         <div class="form-crud">
             <h2>Modificar Producto</h2>
             <form method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="nombre">Nombre del Producto</label>
-                    <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($producto->nombre); ?>" required>
-                </div>
-                <div class="form-group">
-                <label for="categoria">Categoria</label>
-                <select id="categoria" name="categoria" required>
-                    <option value="" disabled selected>Seleccione una Categoria</option>
-                    <option value="Café">Café</option>
-                    <option value="Comida">Comida</option>
-                    <option value="Bebidas">Bebidas</option>
-                </select>
-                </div>
-                <div class="form-group">
-                    <label for="imagen">Imagen del Producto</label>
-                    <input type="file" id="imagen" name="imagen">
-                    <p>Imagen actual: <img src="<?php echo htmlspecialchars($producto->imagen); ?>" alt="<?php echo htmlspecialchars($producto->nombre); ?>" style="width: 50px;"></p>
-                </div>
-                <button type="submit" name="btnmodificar_producto" value="ok">Modificar Producto</button>
-            </form>
+    <?php if (!empty($errores)): ?>
+        <div class="alert alert-danger">
+            <?php foreach ($errores as $error): ?>
+                <p><?php echo htmlspecialchars($error); ?></p>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+    <div class="form-group">
+        <label for="nombre">Nombre del Producto</label>
+        <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($producto->nombre); ?>" required>
+    </div>
+    <div class="form-group">
+        <label for="categoria">Categoria</label>
+        <select id="categoria" name="categoria" required>
+            <option value="" disabled>Seleccione una Categoria</option>
+            <option value="Café" <?php if ($producto->categoria === "Café") echo "selected"; ?>>Café</option>
+            <option value="Comida" <?php if ($producto->categoria === "Comida") echo "selected"; ?>>Comida</option>
+            <option value="Bebidas" <?php if ($producto->categoria === "Bebidas") echo "selected"; ?>>Bebidas</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="imagen">Imagen del Producto</label>
+        <input type="file" id="imagen" name="imagen">
+        <p>Imagen actual: <img src="<?php echo htmlspecialchars($producto->imagen); ?>" alt="<?php echo htmlspecialchars($producto->nombre); ?>" style="width: 50px;"></p>
+    </div>
+    <button type="submit" name="btnmodificar_producto" value="ok">Modificar Producto</button>
+</form>
         </div>
     </div
     </main>
