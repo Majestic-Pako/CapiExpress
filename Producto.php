@@ -38,7 +38,9 @@ if (isset($_GET['logout'])) {
 </head>
 <body>
     <main>
-    <?php require_once('./layout/header-login.php'); ?>
+    <?php 
+        require_once('./layout/header-login.php'); 
+    ?>
     <section class="mensaje-crud">
         <article class="sub-mens-crud">
             <h1>Bienvenido al Listado de Nuestros Productos!!!</h1>
@@ -116,5 +118,8 @@ if (isset($_GET['logout'])) {
         </div>
     </div>
     </main>
+    <?php 
+        require_once('./layout/footer-login.php'); 
+    ?>
 </body>
 </html>

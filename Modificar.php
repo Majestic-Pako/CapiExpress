@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? null;
     $password = $_POST['password'] ?? null;
     $rol = $rolUsuario === 'administrador' ? ($_POST['rol'] ?? $datos->rol) : $datos->rol; 
-
+    
     $errores = [];
     if (empty($nombre)) $errores[] = "El nombre no puede estar vacío.";
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errores[] = "El email no es válido.";
@@ -82,7 +82,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <main>
-    <?php require_once('./layout/header-login.php'); ?>
+    <?php 
+        require_once('./layout/header-login.php'); 
+    ?>
+        <section class="mensaje-crud">
+            <article class="sub-mens-crud">
+                <h1>En este apartado podes modificar tus Datos</h1>
+                <p>Si te equivocaste en alguna parte o si cambiaste de correo podes cambiarlo aca</p>
+                <p><strong>La empresa CapiExpress nunca pedira tus datos personales, no los compartas a terceros</strong></p>
+            </article>
+            <div class="img-container">
+                <img src="img/Capi-Edit.png" alt="Imagen de edición" class="img-mensaje">
+            </div>
+        </section>
         <div class="form-crud">
             <h2>Editar Usuario</h2>
             <?php if ($mensaje): ?>
@@ -117,6 +129,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         </div>
     </main>
+    <?php 
+        require_once('./layout/footer-login.php'); 
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

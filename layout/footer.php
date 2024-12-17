@@ -18,13 +18,13 @@
         </ul>
         <ul class="fin">
             <li class="fin-elem">
-                <a href="index.php" class="fin-icon">Inicio</a>
+                <a href="Index.php" class="fin-icon">Inicio</a>
             </li>
             <li class="fin-elem">
                 <a href="Menu.php" class="fin-icon">Menu</a>
             </li>
             <li class="fin-elem">
-                <a href="#" class="fin-icon">Sobre nosotros</a>
+                <a href="Historia.php" class="fin-icon">Sobre nosotros</a>
             </li>
             <li class="fin-elem">
                 <a href="Formulario.php" class="fin-icon">Unete</a>

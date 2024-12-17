@@ -1045,6 +1045,17 @@ tr:hover {
     }
 }
 
+.boton-volver {
+    margin-top: 20px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.boton-volver .btn {
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
 .footer{
     position: relative;
     width: 100%;

@@ -23,10 +23,12 @@ if (isset($_GET['logout'])) {
 </head>
 <body>
     <main>
-    <?php require_once('./layout/header-login.php'); ?>
+    <?php 
+        require_once('./layout/header-login.php'); 
+    ?>
     <section class="entrada">
         <article>
-            <h1>Bienvenido al Sistema <?php echo htmlspecialchars($nombreUsuario); ?>!!!</h1>
+            <h1>Bienvenido al Sistema, <?php echo htmlspecialchars($nombreUsuario); ?>!!!</h1>
             <p>Aca te dejamos una breve explicacion de los accesos rapidos de la barra de navegacion</p>
         </article>
         <div class="contenido-entrada">
@@ -48,5 +50,8 @@ if (isset($_GET['logout'])) {
             </div>
         </section>
     </main>
+    <?php 
+        require_once('./layout/footer-login.php'); 
+    ?>
 </body>
 </html>
