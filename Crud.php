@@ -2,19 +2,28 @@
 session_start(); // Iniciar la sesión
 
 // Verificar si el usuario está autenticado
-$_SESSION['rol'] = 'administrador';
 if (!isset($_SESSION['usuario'])) {
     header('Location: login.php'); // Redirigir al inicio de sesión si no está autenticado
     exit();
 }
 
-// Verificar si el usuario tiene el rol de administrador
-$esAdministrador = (isset($_SESSION['rol']) && $_SESSION['rol'] === 'administrador'); 
+$rolUsuario = $_SESSION['rol'] ?? ''; 
+$idUsuario = $_SESSION['id'] ?? ''; 
+
+if ($rolUsuario === 'empleado') {
+    header("Location: Modificar.php?id=$idUsuario");
+    exit();
+}
+
+// Verificar si el usuario quiere cerrar sesión
 if (isset($_GET['logout'])) {
     session_destroy(); // Destruir la sesión
     header('Location: login.php'); // Redirigir al login
     exit();
 }
+
+// Verificar si el usuario tiene el rol de administrador
+$esAdministrador = ($rolUsuario === 'administrador');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,16 +36,11 @@ if (isset($_GET['logout'])) {
 </head>
 <body>
 <main>
-<?php
+    <?php
         require_once('./layout/header-login.php');
     ?>
-
 <div class="contenedor-crud">
     <?php if ($esAdministrador): ?>
-        <?php
-// Mostrar el valor de 'rol' para depuración
-var_dump($_SESSION['rol']); // Esto mostrará el valor en pantalla
-?>
     <form method="POST" class="form-crud">
         <h2>Registro de Usuario</h2>
         <div class="form-group">
