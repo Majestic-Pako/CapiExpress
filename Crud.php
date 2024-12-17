@@ -3,24 +3,20 @@
 session_start();
 include 'consultas/conexion.php';
 
-// Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
     exit();
 }
 
-// Obtener los datos de la sesión
 $usuarioSesion = $_SESSION['usuario'] ?? null;
 $rolSesion = $usuarioSesion['rol'] ?? null;
 $idUsuario = $usuarioSesion['id'] ?? null;
 
-// Redirigir automáticamente si el rol es 'empleado'
 if ($rolSesion === 'empleado') {
     header("Location: Modificar.php?id=$idUsuario");
     exit();
 }
 
-// Logout (cerrar sesión)
 if (isset($_GET['logout'])) {
     session_destroy();
     header('Location: login.php');

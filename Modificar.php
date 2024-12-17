@@ -3,7 +3,7 @@ include 'consultas/conexion.php';
 session_start();
 
 if (!isset($_SESSION['usuario'])) {
-    echo '<div class="alert alert-danger">No tiene permisos para acceder a esta página.</div>';
+    include('Error.php');
     exit;
 }
 
@@ -27,7 +27,7 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
     exit;
 }
 
-$mensaje = '';  // Variable para almacenar mensajes
+$mensaje = ''; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'] ?? null;

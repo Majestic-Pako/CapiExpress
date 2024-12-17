@@ -13,7 +13,6 @@ $usuarioSesion = $_SESSION['usuario'] ?? null;
 $rolSesion = $usuarioSesion['rol'] ?? null;
 $idUsuario = $usuarioSesion['id'] ?? null;
 
-// Redirigir automáticamente si el rol es 'empleado'
 if ($rolSesion === 'empleado') {
     header("Location: Modificar.php?id=$idUsuario");
     exit();
@@ -40,6 +39,16 @@ if (isset($_GET['logout'])) {
 <body>
     <main>
     <?php require_once('./layout/header-login.php'); ?>
+    <section class="mensaje-crud">
+        <article class="sub-mens-crud">
+            <h1>Bienvenido al Listado de Nuestros Productos!!!</h1>
+            <p>Aca almacenamos la informacion de nuestros productos disponibles para el publico si es necesario una modificacion o eliminar uno aca podes hacerlo!</p>
+            <p>Se le pide a los Administradores ser cuidados con el listado de productos para evitar complicaciones con el sistema</p>
+        </article>
+        <div class="img-container">
+        <img src="img/Lista.png" alt="Imagen de edición" class="img-mensaje">
+        </div>
+    </section>
     <div class="contenedor-crud">
         <div class="form-crud">
             <h2>Registro de Producto</h2>

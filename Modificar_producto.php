@@ -3,24 +3,20 @@
 session_start();
 include 'consultas/conexion.php';
 
-// Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
     exit();
 }
 
-// Obtener los datos de la sesión
 $usuarioSesion = $_SESSION['usuario'] ?? null;
 $rolSesion = $usuarioSesion['rol'] ?? null;
 $idUsuario = $usuarioSesion['id'] ?? null;
 
-// Redirigir automáticamente si el rol es 'empleado'
 if ($rolSesion === 'empleado') {
     header("Location: Modificar.php?id=$idUsuario");
     exit();
 }
 
-// Verificar si se ha pasado un id de producto
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     header('Location: Crud_producto.php');
     exit();
@@ -28,7 +24,6 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 
 $idProducto = $_GET['id'];
 
-// Obtener los datos del producto
 $sql = $conexion->prepare("SELECT * FROM productos WHERE id = :id");
 $sql->bindParam(':id', $idProducto, PDO::PARAM_INT);
 $sql->execute();
@@ -39,7 +34,6 @@ if (!$producto) {
     exit();
 }
 
-// Procesar el formulario de modificación
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnmodificar_producto'])) {
     $nombre = $_POST['nombre'] ?? null;
     $categoria = $_POST['categoria'] ?? null;
@@ -49,9 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnmodificar_producto
     if (empty($nombre)) $errores[] = "El nombre del producto no puede estar vacío.";
     if (empty($categoria)) $errores[] = "La categoría no puede estar vacía.";
 
-    $imagenRuta = $producto->imagen; // Si no se cambia la imagen, usamos la original
+    $imagenRuta = $producto->imagen;
 
-    // Si se ha subido una nueva imagen, procesarla
     if ($imagen && $imagen['error'] === 0) {
         $imagenRuta = 'img/' . basename($imagen['name']);
         if (!move_uploaded_file($imagen['tmp_name'], $imagenRuta)) {
@@ -61,13 +54,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnmodificar_producto
 
     if (empty($errores)) {
         try {
-            // Actualizar el producto en la base de datos
             $sqlUpdate = $conexion->prepare("UPDATE productos SET nombre = :nombre, categoria = :categoria, imagen = :imagen WHERE id = :id");
             $sqlUpdate->bindParam(':nombre', $nombre);
             $sqlUpdate->bindParam(':categoria', $categoria);
             $sqlUpdate->bindParam(':imagen', $imagenRuta);
             $sqlUpdate->bindParam(':id', $idProducto, PDO::PARAM_INT);
-
             if ($sqlUpdate->execute()) {
                 echo '<div class="alert alert-success">Producto modificado correctamente.</div>';
             } else {
