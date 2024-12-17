@@ -18,6 +18,13 @@ header{
     padding: 20px;
 }
 
+.header-login {
+    display: flex; /* Asegura que los elementos del header estén en una fila */
+    justify-content: space-between; /* Distribuye espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 20px;
+}
+
 nav{
     display: flex;
     justify-content:space-between;
@@ -69,6 +76,33 @@ header nav a:hover{
     color: #8B8000; 
 } 
 
+.menu-icon {
+    font-size: 24px; 
+    color: #6f6a00; 
+    transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+    color: #FFD700; /* Color dorado para el ícono */
+    outline: 2px solid #6f6a00; /* Contorno en #6f6a00 */
+    border-radius: 50%; /* Contorno redondeado */
+    padding: 5px; /* Espaciado para el contorno */
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el ratón */
+}
+
 @media (max-width: 650px) {
     nav {
         flex-direction: column; 
@@ -80,6 +114,15 @@ header nav a:hover{
     }
     nav ul li {
         margin: 10px;
+    }
+    .header-login {
+        flex-direction: column; /* Cambia a diseño en columna */
+        align-items: center;
+    }
+    .btn-logout {
+        margin-top: 20px; /* Espaciado entre el menú y el botón */
+        width: auto; /* Ajusta el ancho automáticamente */
+        text-align: center;
     }
 }
 
@@ -775,6 +818,124 @@ header, main, footer {
 
 .mensaje-error:last-of-type {
     margin-bottom: 0;
+}
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Estilos específicos para el formulario CRUD */
+.form-crud {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+.form-crud h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6f4e37;
+}
+
+.form-crud .form-group {
+    margin-bottom: 15px;
+}
+
+.form-crud label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-crud input,
+.form-crud select,
+.form-crud button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-crud button {
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-crud button:hover {
+    background-color: #8b4513;
+}
+
+/* Tabla de usuarios */
+.table-container {
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #6f4e37;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-edit {
+    background-color: #ffa500;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .form-crud {
+        margin: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
 }
 
 .footer{
