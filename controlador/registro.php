@@ -6,7 +6,6 @@ if (!empty($_POST["btnregistrar"])) {
         $password = $_POST["password"];
         $rol = $_POST["rol"];
 
-        // Verificar si el correo ya existe
         $verificarCorreo = $conexion->prepare("SELECT * FROM usuarios WHERE email = :email");
         $verificarCorreo->bindParam(':email', $email);
         $verificarCorreo->execute();

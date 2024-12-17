@@ -819,10 +819,123 @@ header, main, footer {
 .mensaje-error:last-of-type {
     margin-bottom: 0;
 }
-.container {
-    padding: 20px;
-    max-width: 1200px;
+
+.entrada{
+    background-color: #D2B48C;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     margin: auto;
+    text-align: center;
+    width: 80%;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.entrada h1{
+    color: #D2691E;
+    font-size: 25pt;
+}
+
+.entrada p{
+    color: #333;
+    font-size: 15pt;
+}
+
+.contenido-entrada{
+    flex: 0 0 40%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.entrada-img{
+    max-width: 100%; 
+    height: auto;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .entrada {
+        text-align: center;
+    }
+
+    .entrada-img {
+        margin-top: 20px;
+        flex: 0 0 auto;
+    }
+}
+
+.mensaje-crud {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.sub-mens-crud {
+    flex: 1;
+    background-color: #fefefe; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #6f4e37;
+    font-family: Arial, sans-serif;
+}
+
+.sub-mens-crud h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #8b4513;
+}
+
+.sub-mens-crud p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.img-container {
+    flex: 0 0 40%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.img-mensaje {
+    max-width: 100%; 
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .mensaje-crud {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .img-container {
+        margin-top: 20px;
+        flex: 0 0 auto;
+    }
+}
+
+.contenedor-crud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1350px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.form-crud, .table-container {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: 100%; 
 }
 
 .form-crud {
@@ -909,23 +1022,18 @@ tr:hover {
     text-decoration: none;
 }
 
-.btn-edit {
-    background-color: #ffa500;
-}
-
-.btn-delete {
-    background-color: #e74c3c;
-}
-
 .btn:hover {
     opacity: 0.8;
 }
 
 @media (max-width: 768px) {
-    .form-crud {
+    .contenedor-crud {
+        flex-direction: column; 
+    }
+
+    .form-crud, .table-container {
+        flex: 1 1 100%; 
         margin: auto;
-        width: 80%;
-        justify-content: center;
     }
 
     table {
