@@ -1,5 +1,5 @@
 <?php
-if (!empty($_GET["id"]) && $esAdministrador) {
+if (!empty($_GET["id"])) {
     $id = $_GET["id"];
     $sql = $conexion->prepare("DELETE FROM usuarios WHERE id = :id");
     $sql->bindParam(':id', $id, PDO::PARAM_INT);

@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'email' => $usuario['email'],
                     'rol' => $usuario['rol'],
                 ];
-                header("Location: Crud.php"); // Aca va la pagina cuando inicia Sesion Exitosamente
+                header("Location: Entrada.php"); // Aca va la pagina cuando inicia Sesion Exitosamente
                 exit;
             } else {
                 $errores_login[] = "Correo o contraseña incorrectos.";
