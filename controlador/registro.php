@@ -14,7 +14,6 @@ if (!empty($_POST["btnregistrar"])) {
         if ($verificarCorreo->rowCount() > 0) {
             echo '<div class="alert alert-danger">El correo ya está registrado.</div>';
         } else {
-            // Insertar el nuevo usuario
             $sql = $conexion->prepare("INSERT INTO usuarios (nombre, email, password, rol) VALUES (:nombre, :email, :password, :rol)");
             $sql->bindParam(':nombre', $nombre);
             $sql->bindParam(':email', $email);

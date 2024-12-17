@@ -15,18 +15,16 @@ if ($rolUsuario === 'empleado') {
     exit();
 }
 
-// Verificar si el usuario quiere cerrar sesión
 if (isset($_GET['logout'])) {
-    session_destroy(); // Destruir la sesión
-    header('Location: login.php'); // Redirigir al login
+    session_destroy(); 
+    header('Location: login.php'); 
     exit();
 }
 
-// Verificar si el usuario tiene el rol de administrador
 $esAdministrador = ($rolUsuario === 'administrador');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +38,6 @@ $esAdministrador = ($rolUsuario === 'administrador');
         require_once('./layout/header-login.php');
     ?>
 <div class="contenedor-crud">
-    <?php if ($esAdministrador): ?>
     <form method="POST" class="form-crud">
         <h2>Registro de Usuario</h2>
         <div class="form-group">
@@ -65,9 +62,6 @@ $esAdministrador = ($rolUsuario === 'administrador');
         </div>
         <button type="submit" name="btnregistrar" value="ok">Registrar</button>
     </form>
-    <?php else: ?>
-    <p>No tienes permisos para registrar usuarios.</p>
-    <?php endif; ?>
     <div class="table-container">
         <h2>Tabla de Empleados</h2>
         <table>
