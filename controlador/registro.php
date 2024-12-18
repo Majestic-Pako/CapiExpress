@@ -3,7 +3,7 @@ if (!empty($_POST["btnregistrar"])) {
     if (!empty($_POST["nombre"]) && !empty($_POST["email"]) && !empty($_POST["password"]) && !empty($_POST["rol"])) {
         $nombre = $_POST["nombre"];
         $email = $_POST["email"];
-        $password = $_POST["password"];
+        $password = md5($_POST["password"]);
         $rol = $_POST["rol"];
 
         $verificarCorreo = $conexion->prepare("SELECT * FROM usuarios WHERE email = :email");
@@ -29,4 +29,5 @@ if (!empty($_POST["btnregistrar"])) {
         echo '<div class="alert alert-warning">Algunos campos están vacíos.</div>';
     }
 }
+
 ?>
