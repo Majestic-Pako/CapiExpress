@@ -694,11 +694,11 @@ header, main, footer {
 }
 
 .input-box.focus{
-    outline-color: #FFF8DC;
+    outline-color: #FFD700;
 }
 
 .input-box.focus i{
-    color: #FFF8DC;
+    color: #FFD700;
 }
 
 .checkbox{
@@ -716,7 +716,7 @@ header, main, footer {
 
 .checkbox label{
     font-size: 1em;
-    color: #fafafa;
+    color: white;
     cursor: pointer;
 }
 
