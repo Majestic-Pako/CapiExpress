@@ -1,4 +1,5 @@
 <?php
+
 require_once('./funciones/validacion.php');
 $nombre = test_input($_POST['nombre'] ?? null);
 $telefono = test_input($_POST['telefono'] ?? null);

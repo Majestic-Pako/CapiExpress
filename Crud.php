@@ -35,70 +35,70 @@ if (isset($_GET['logout'])) {
     rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<main>
-    <?php 
-        require_once('./layout/header-login.php'); 
-    ?>
-    <section class="mensaje-crud">
-        <article class="sub-mens-crud">
-            <h1>Bienvenido al Registro de Datos</h1>
-            <p>Aca podras ver los datos de los empleados y administradores como tambien podras modificarlos, eliminarlos o crear un nuevo usuario al sistema</p>
-            <p>¡Recuerda no compartir los datos personales del personal a terceros!</p>
-        </article>
-        <div class="img-container">
-        <img src="img/Capi-Edit.png" alt="Imagen de edición" class="img-mensaje">
-        </div>
-    </section>
-    <div class="contenedor-crud">
-    <div class="form-crud">
-        <h2>Registro de Usuario</h2>
+    <main>
         <?php 
-            include 'controlador/registro.php';
+            require_once('./layout/header-login.php'); 
         ?>
-        <form method="POST">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+        <section class="mensaje-crud">
+            <article class="sub-mens-crud">
+                <h1>Bienvenido al Registro de Datos</h1>
+                <p>Aca podras ver los datos de los empleados y administradores como tambien podras modificarlos, eliminarlos o crear un nuevo usuario al sistema</p>
+                <p>¡Recuerda no compartir los datos personales del personal a terceros!</p>
+            </article>
+            <div class="img-container">
+                <img src="img/Capi-Edit.png" alt="Imagen de edición" class="img-mensaje">
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+        </section>
+        <div class="contenedor-crud">
+            <div class="form-crud">
+                <h2>Registro de Usuario</h2>
+                <?php 
+                    include 'controlador/registro.php';
+                ?>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="rol">Rol</label>
+                    <select id="rol" name="rol" required>
+                        <option value="" disabled selected>Seleccione un Rol</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="empleado">Empleado</option>
+                    </select>
+                </div>
+                    <button type="submit" name="btnregistrar" value="ok">Registrar</button>
+            </form>
             </div>
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="rol">Rol</label>
-                <select id="rol" name="rol" required>
-                    <option value="" disabled selected>Seleccione un Rol</option>
-                    <option value="administrador">Administrador</option>
-                    <option value="empleado">Empleado</option>
-                </select>
-            </div>
-            <button type="submit" name="btnregistrar" value="ok">Registrar</button>
-        </form>
-    </div>
-    <div class="table-container">
-        <h2>Lista de Empleados</h2>
-        <?php 
-            include 'controlador/eliminar.php';
-        ?>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Email</th>
-                    <th>Contraseña</th>
-                    <th>Rol</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $sql = $conexion->query("SELECT * FROM usuarios");
-                while ($datos = $sql->fetch(PDO::FETCH_OBJ)) {
+            <div class="table-container">
+                <h2>Lista de Empleados</h2>
+                <?php 
+                    include 'controlador/eliminar.php';
+                ?>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Contraseña</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = $conexion->query("SELECT * FROM usuarios");
+                    while ($datos = $sql->fetch(PDO::FETCH_OBJ)) {
                     echo "<tr>
                             <td>{$datos->id}</td>
                             <td>{$datos->nombre}</td>
@@ -114,16 +114,16 @@ if (isset($_GET['logout'])) {
                                 </a>
                             </td>
                         </tr>";
-                }
-                ?>
-            </tbody>
-        </table>
-    </div>
-</div>
-</main>
-    <?php 
-        require_once('./layout/footer-login.php'); 
-    ?>
+                    }
+                    ?>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </main>
+        <?php 
+            require_once('./layout/footer-login.php'); 
+        ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

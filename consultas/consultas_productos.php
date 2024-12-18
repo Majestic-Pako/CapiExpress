@@ -2,7 +2,6 @@
 
 function getProductos(PDO $conexion, $categoria=null)
 {
-
     $productos = [];
 
     if($categoria){
@@ -14,8 +13,5 @@ function getProductos(PDO $conexion, $categoria=null)
         $consulta = $conexion->query('SELECT * FROM productos');
         $productos = $consulta->fetchAll(PDO::FETCH_ASSOC);    
     }
-
     return $productos;
-
-    
 }

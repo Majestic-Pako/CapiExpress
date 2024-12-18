@@ -28,11 +28,11 @@
                 <h3>Servicio Excelente</h3>
             </div>
             <div class="cardu">
-            <ion-icon name="wifi-outline" class="icono-cardu"></ion-icon>
+                <ion-icon name="wifi-outline" class="icono-cardu"></ion-icon>
                 <h3>Wifi Gratis</h3>
             </div>
             <div class="cardu">
-            <ion-icon name="paw-outline" class="icono-cardu"></ion-icon>
+                <ion-icon name="paw-outline" class="icono-cardu"></ion-icon>
                 <h3>Permitimos Mascotas</h3>
             </div>
         </section>
@@ -53,7 +53,7 @@
 					src="img/Galeria-4.png"
 					class="galeria-img-5"
 				/>
-			</section>
+		</section>
     </main>
     <?php
         require_once('./layout/footer.php');

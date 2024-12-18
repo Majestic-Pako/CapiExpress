@@ -1,4 +1,5 @@
 <?php
+
 require_once('./funciones/validacion.php');
 $conexion = new mysqli("localhost", "root", "", "tp");
 
@@ -43,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'email' => $usuario['email'],
                     'rol' => $usuario['rol'],
                 ];
-                header("Location: Entrada.php"); // Aca va la pagina cuando inicia Sesion Exitosamente
+                header("Location: Entrada.php"); 
                 exit;
             } else {
                 $errores_login[] = "Correo o contraseña incorrectos.";

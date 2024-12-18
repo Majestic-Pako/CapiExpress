@@ -94,64 +94,60 @@ if (isset($_GET['logout'])) {
         <?php 
             require_once('./layout/header-login.php'); 
         ?>
-    <section class="mensaje-crud">
-        <article class="sub-mens-crud">
-            <h1>Modificacion de los Productos</h1>
-            <p>Si ya no hay Stock del producto o se le necesita hacer alguna modificacion en este apartado se realiza</p>
-            <p><strong>Se le recuerda a los administradores que si realizan una falla en el listado pueden ser demandados por la empresa 😊</strong></p>
-        </article>
-        <div class="img-container">
-        <img src="img/Lista.png" alt="Imagen de edición" class="img-mensaje">
-        </div>
-    </section>
-    <div class="contenedor-crud">
-        <div class="form-crud">
-            <h2>Modificar Producto</h2>
-            <form method="POST" enctype="multipart/form-data">
-                <!-- Mostrar mensajes de error -->
-                <?php if (!empty($errores)): ?>
-                <div class="alert alert-danger">
-                    <?php foreach ($errores as $error): ?>
-                    <p><?php echo htmlspecialchars($error); ?></p>
-                    <?php endforeach; ?>
-                </div>
-                <?php endif; ?>
-
-                <!-- Mostrar mensaje de éxito -->
-                <?php if (!empty($mensajeExito)): ?>
-                <div class="alert alert-success">
-                    <p><?php echo htmlspecialchars($mensajeExito); ?></p>
-                </div>
-                <?php endif; ?>
-
-                <div class="form-group">
-                    <label for="nombre">Nombre del Producto</label>
-                    <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($producto->nombre); ?>" required>
-                </div>
-                <div class="form-group">
-                    <label for="categoria">Categoria</label>
-                    <select id="categoria" name="categoria" required>
-                        <option value="" disabled>Seleccione una Categoria</option>
-                        <option value="Café" <?php if ($producto->categoria === "Café") echo "selected"; ?>>Café</option>
-                        <option value="Comida" <?php if ($producto->categoria === "Comida") echo "selected"; ?>>Comida</option>
-                        <option value="Bebidas" <?php if ($producto->categoria === "Bebidas") echo "selected"; ?>>Bebidas</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="imagen">Imagen del Producto</label>
-                    <input type="file" id="imagen" name="imagen">
-                    <p>Imagen actual: <img src="<?php echo htmlspecialchars($producto->imagen); ?>" alt="<?php echo htmlspecialchars($producto->nombre); ?>" style="width: 50px;"></p>
-                </div>
-                <button type="submit" name="btnmodificar_producto" value="ok">Modificar Producto</button>
-            </form>
-            <div class="boton-volver">
-                <a href="Producto.php" class="btn btn-secondary">Volver</a>
+        <section class="mensaje-crud">
+            <article class="sub-mens-crud">
+                <h1>Modificacion de los Productos</h1>
+                <p>Si ya no hay Stock del producto o se le necesita hacer alguna modificacion en este apartado se realiza</p>
+                <p><strong>Se le recuerda a los administradores que si realizan una falla en el listado pueden ser demandados por la empresa 😊</strong></p>
+            </article>
+            <div class="img-container">
+                <img src="img/Lista.png" alt="Imagen de edición" class="img-mensaje">
+            </div>
+        </section>
+        <div class="contenedor-crud">
+            <div class="form-crud">
+                <h2>Modificar Producto</h2>
+                <form method="POST" enctype="multipart/form-data">
+                    <?php if (!empty($errores)): ?>
+                    <div class="alert alert-danger">
+                        <?php foreach ($errores as $error): ?>
+                        <p><?php echo htmlspecialchars($error); ?></p>
+                        <?php endforeach; ?>
+                    </div>
+                    <?php endif; ?>
+                    <?php if (!empty($mensajeExito)): ?>
+                    <div class="alert alert-success">
+                        <p><?php echo htmlspecialchars($mensajeExito); ?></p>
+                    </div>
+                    <?php endif; ?>
+                    <div class="form-group">
+                        <label for="nombre">Nombre del Producto</label>
+                        <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($producto->nombre); ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled>Seleccione una Categoria</option>
+                            <option value="Café" <?php if ($producto->categoria === "Café") echo "selected"; ?>>Café</option>
+                            <option value="Comida" <?php if ($producto->categoria === "Comida") echo "selected"; ?>>Comida</option>
+                            <option value="Bebidas" <?php if ($producto->categoria === "Bebidas") echo "selected"; ?>>Bebidas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagen">Imagen del Producto</label>
+                        <input type="file" id="imagen" name="imagen">
+                        <p>Imagen actual: <img src="<?php echo htmlspecialchars($producto->imagen); ?>" alt="<?php echo htmlspecialchars($producto->nombre); ?>" style="width: 50px;"></p>
+                    </div>
+                        <button type="submit" name="btnmodificar_producto" value="ok">Modificar Producto</button>
+                </form>
+                    <div class="boton-volver">
+                        <a href="Producto.php" class="btn btn-secondary">Volver</a>
+                    </div>
             </div>
         </div>
-    </div>
     </main>
-    <?php 
-        require_once('./layout/footer-login.php'); 
-    ?>
+        <?php 
+            require_once('./layout/footer-login.php'); 
+        ?>
 </body>
 </html>

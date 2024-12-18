@@ -1,4 +1,5 @@
 <?php
+
 include 'consultas/conexion.php';
 session_start();
 
@@ -82,9 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <main>
-    <?php 
-        require_once('./layout/header-login.php'); 
-    ?>
+        <?php 
+            require_once('./layout/header-login.php'); 
+        ?>
         <section class="mensaje-crud">
             <article class="sub-mens-crud">
                 <h1>En este apartado podes modificar tus Datos</h1>
@@ -125,13 +126,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 <?php endif; ?>
                 <button type="submit" name="btnregistrar" value="ok">Guardar cambios</button>
-                <a href="Entrada.php" class="btn btn-secondary mt-3">Cancelar</a>
+                <a href="Entrada.php" class="btn btn-secondary mt-3">Volver</a>
             </form>
         </div>
     </main>
-    <?php 
-        require_once('./layout/footer-login.php'); 
-    ?>
+        <?php 
+            require_once('./layout/footer-login.php'); 
+        ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
